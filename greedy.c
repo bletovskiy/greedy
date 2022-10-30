@@ -1,14 +1,15 @@
 #include<stdio.h>
 #include<math.h>
-#include<cs50.c>
 
 int main(void)
 {
     int cents_owned;
+    float dollars_owned;
 
     do
     {
-        float dollars_owned = get_float("Change owned: ");
+        printf("Change owned: ");
+        scanf("%f", &dollars_owned);
         cents_owned = round(dollars_owned * 100);
     }
     while (cents_owned <= 0);
